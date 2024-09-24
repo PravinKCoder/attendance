@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.attendance.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_admissionFragment"
+            app:destination="@id/admissionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_studentRecordsFragment"
+            app:destination="@id/studentRecordsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_attendanceFragment"
+            app:destination="@id/attendanceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_attendanceRecordsFragment"
+            app:destination="@id/attendanceRecordsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/admissionFragment"
+        android:name="com.example.attendance.fragment.AdmissionFragment"
+        android:label="AdmissionFragment" />
+    <fragment
+        android:id="@+id/studentRecordsFragment"
+        android:name="com.example.attendance.fragment.StudentRecordsFragment"
+        android:label="fragment_student_records"
+        tools:layout="@layout/fragment_student_records" >
+        <action
+            android:id="@+id/action_studentRecordsFragment_to_admissionFragment"
+            app:destination="@id/admissionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendanceFragment"
+        android:name="com.example.attendance.fragment.AttendanceFragment"
+        android:label="fragment_attendance"
+        tools:layout="@layout/fragment_attendance" />
+    <fragment
+        android:id="@+id/attendanceRecordsFragment"
+        android:name="com.example.attendance.fragment.AttendanceRecordsFragment"
+        android:label="AttendanceRecordsFragment" />
+</navigation>
